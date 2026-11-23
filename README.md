@@ -1,17 +1,11 @@
-# myportofolio_mobile
+### Tugas 7
 
-A new Flutter project.
+Widget tree adalah struktur hierarki seluruh widget yang menyusun tampilan, di mana parent membungkus child dan memberinya batasan ukuran, lalu child melaporkan ukurannya kembali ke parent. Widget yang saya pakai antara lain MaterialApp (root), Scaffold dan AppBar (kerangka halaman), InfoCard dan ItemCard (kartu buatan sendiri), GridView, Column, Row, Padding, SizedBox, Container, Material dan InkWell (kartu yang bisa disentuh), Text, Icon, serta SnackBar dengan ScaffoldMessenger (pesan singkat). MaterialApp menyediakan tema, halaman awal, dan sistem navigasi Material Design yang dibutuhkan widget seperti Scaffold dan SnackBar, sehingga umum dipakai sebagai root. StatelessWidget tidak memiliki state yang berubah dan cocok untuk tampilan statis seperti halaman menu, sedangkan StatefulWidget menyimpan state yang berubah lewat setState() dan cocok untuk formulir atau data yang berubah. BuildContext adalah penanda posisi widget di widget tree yang dipakai di dalam build() untuk mengakses ancestor, misalnya Theme.of(context) dan ScaffoldMessenger.of(context). Hot reload menyuntikkan kode baru sambil mempertahankan state, sedangkan hot restart memulai ulang aplikasi dan menghapus state, dan restart diperlukan misalnya saat mengubah main(), variabel global atau static, initState, atau menambah dependensi di pubspec.yaml.
 
-## Getting Started
+Dalam pengerjaan tugas ini saya menggunakan bantuan dari claude AI dalam membantu saya dalam memahami alur dari penyelesaiian tugas. Kekurangan AI adalah sering halu dan membuat perkiraan sendiri.
 
-This project is a starting point for a Flutter application.
+### Tugas 8
 
-A few resources to get you started if this is your first Flutter project:
+Navigator.push() menumpuk halaman baru di atas halaman saat ini, pushReplacement() mengganti halaman saat ini sehingga tidak bisa dikembalikan, dan pop() menutup halaman paling atas. Formulir dari kartu aksi dibuka dengan push() agar pengguna bisa kembali, sedangkan opsi Home di drawer memakai pushReplacement() ke MyHomePage sehingga halaman formulir diganti oleh halaman utama. Scaffold, AppBar, dan Drawer membentuk kerangka yang sama di tiap halaman, dan LeftDrawer dipakai bersama di halaman utama dan formulir. Contoh warna tema: Colors.indigo menjadi seed ColorScheme di main.dart, warna DrawerHeader, dan sumber colorScheme.primary untuk AppBar formulir. Formulir memakai Column di dalam SingleChildScrollView dengan Padding dan SizedBox, sehingga semua input dan tombol Simpan tetap terjangkau dengan menggulir saat layar sempit atau papan ketik tampil. GlobalKey<FormState> menghubungkan kode dengan Form, validator pada tiap field mengembalikan pesan error atau null, dan validate() menjalankan semuanya saat Simpan ditekan sehingga dialog hanya muncul jika semua lolos. Nama perusahaan berisi spasi saja akan ditolak, dan jenis input atau papan ketik saja tidak cukup karena pengguna tetap bisa mengosongkan atau menempel nilai apa saja.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Pada pengerjaan tugas 8 ini saya menggunakan bantuan dari Claude AI dengan cara membantu saya memahami alur pembuatan code dart.
